@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add get hash crack status endpoint">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Worker.java" afterDir="false" />
+    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add worker with crack hash logic">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CrackHashManagerSchema.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHashStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHashStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHashStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHashStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Worker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +75,47 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "spring.configuration.checksum": "bfddc7c158b82a95024dcde8b8eeda8e",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="NSU-DS-2 [genJaxb]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="genJaxb" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.NSU-DS-2 [genJaxb]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +127,7 @@
       <workItem from="1681622743680" duration="1740000" />
       <workItem from="1681654059748" duration="971000" />
       <workItem from="1682148312118" duration="12945000" />
+      <workItem from="1682235646187" duration="12560000" />
     </task>
     <task id="LOCAL-00001" summary="Add spring boot">
       <created>1681664764058</created>
@@ -110,16 +150,35 @@
       <option name="project" value="LOCAL" />
       <updated>1682152758545</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add worker with crack hash logic">
+      <created>1682237743856</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682237743856</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add spring boot" />
     <MESSAGE value="Add hash crack endpoint" />
     <MESSAGE value="Add get hash crack status endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add get hash crack status endpoint" />
+    <MESSAGE value="Add worker with crack hash logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add worker with crack hash logic" />
   </component>
 </project>
