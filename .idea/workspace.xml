@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add hash crack endpoint">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHashStatus.java" afterDir="false" />
+    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add get hash crack status endpoint">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Worker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHashStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHashStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/nikita/Desktop/somelab",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,7 +87,7 @@
       <updated>1681622742242</updated>
       <workItem from="1681622743680" duration="1740000" />
       <workItem from="1681654059748" duration="971000" />
-      <workItem from="1682148312118" duration="3429000" />
+      <workItem from="1682148312118" duration="12945000" />
     </task>
     <task id="LOCAL-00001" summary="Add spring boot">
       <created>1681664764058</created>
@@ -101,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681669017192</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add get hash crack status endpoint">
+      <created>1682152758545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682152758545</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add spring boot" />
     <MESSAGE value="Add hash crack endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add hash crack endpoint" />
+    <MESSAGE value="Add get hash crack status endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add get hash crack status endpoint" />
   </component>
 </project>

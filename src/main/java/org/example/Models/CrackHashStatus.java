@@ -8,7 +8,7 @@ enum Status {
 
 public class CrackHashStatus {
     public Status status;
-    public String data;
+    public String[] data;
 
     public CrackHashStatus() {
         status = Status.WAITING;

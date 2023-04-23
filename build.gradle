@@ -13,5 +13,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.googlecode.combinatoricslib:combinatoricslib:2.3'
+	implementation 'commons-codec:commons-codec:1.15'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
