@@ -1,4 +1,4 @@
-package org.example.models;
+package ru.nlatysh.manager.models;
 
 public class CrackHash {
     public String hash;

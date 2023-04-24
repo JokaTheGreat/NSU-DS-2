@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://example.org/models">
+           targetNamespace="http://nlatysh.ru/common/models">
     <xs:element name="CrackHashWorkerResponse">
         <xs:annotation>
             <xs:documentation>Ответ, содержащий строки с совпадающим хэшом</xs:documentation>

@@ -1,20 +1,25 @@
-package org.example;
+package ru.nlatysh.manager;
 
-import org.example.models.CrackHash;
-import org.example.models.CrackHashManagerRequest;
-import org.example.models.CrackHashStatus;
-import org.example.models.CrackHashWorkerResponse;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
+import ru.nlatysh.common.models.CrackHashManagerRequest;
+import ru.nlatysh.common.models.CrackHashWorkerResponse;
+import ru.nlatysh.manager.models.CrackHash;
+import ru.nlatysh.manager.models.CrackHashStatus;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+// TODO: растащить функционал по файлам
+// TODO: разобраться с докером
+// TODO: разобраться с респонсами, ошибкам и тд
 @SpringBootApplication
 @RestController
 public class Manager {
@@ -63,9 +68,10 @@ public class Manager {
         crackHashRequest.setPartNumber(workersCount);
         crackHashRequest.setAlphabet(alphabet);
 
+        // TODO: поменять на webClient
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity response = restTemplate.exchange(
-                new URI("http://localhost:8080/internal/api/worker/hash/crack/task"),
+                new URI("http://localhost:8081/internal/api/worker/hash/crack/task"),
                 HttpMethod.POST,
                 new HttpEntity<>(crackHashRequest),
                 ResponseEntity.class
@@ -75,6 +81,7 @@ public class Manager {
     @PatchMapping("/internal/api/manager/hash/crack/request")
     public void patchCrackHashData(@RequestBody CrackHashWorkerResponse crackHashResponse) {
         var currentCrackHashJob = crackHashJobs.get(crackHashResponse.getRequestId());
+        System.out.println(crackHashResponse);
         currentCrackHashJob.status = CrackHashStatus.Status.READY;
         currentCrackHashJob.data = crackHashResponse.getAnswers().getWords();
     }

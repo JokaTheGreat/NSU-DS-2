@@ -1,4 +1,4 @@
-package org.example.models;
+package ru.nlatysh.manager.models;
 
 import java.util.List;
 

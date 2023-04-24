@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add worker with crack hash logic">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CrackHashManagerSchema.xsd" afterDir="false" />
+    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add worker and manager messaging">
+      <change afterPath="$PROJECT_DIR$/NSU-DS-2-worker/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru.nlatysh.worker/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Models/CrackHashStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHashStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru.nlatysh.worker/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/models/CrackHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHashManagerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/CrackHashManagerRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHashStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/models/CrackHashStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/CrackHashWorkerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/CrackHashWorkerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CrackHashManagerSchema.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-common/src/main/resources/CrackHashManagerSchema.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CrackHashWorkerSchema.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-common/src/main/resources/CrackHashWorkerSchema.xsd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +36,57 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/NSU-DS-2-common">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/NSU-DS-2-manager">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="NSU-DS-2-common" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="NSU-DS-2-common" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="NSU-DS-2-common" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="NSU-DS-2-manager" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="NSU-DS-2-manager" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="NSU-DS-2-manager" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -69,7 +124,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/nikita/Desktop/somelab",
+    "jdk.selected.JAVA_MODULE": "corretto-18",
+    "last_opened_file_path": "C:/Users/nikita/IdeaProjects/NSU-DS-2/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,11 +135,18 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "spring.configuration.checksum": "bfddc7c158b82a95024dcde8b8eeda8e",
+    "spring.configuration.checksum": "4dc02deef374134ee76b69eae4da3099",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\NSU-DS-2-common\src\main\java\ru\nlatysh\common\models" />
+      <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\NSU-DS-2-manager\src\main\java\ru\nlatysh\manager\models" />
+      <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\NSU-DS-2-common\src\main\resources" />
+      <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\NSU-DS-2-common\src\main\java\ru\nlatysh\common" />
+      <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\NSU-DS-2-manager\src\main\java\ru\nlatysh\manager" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\src\main\resources" />
     </key>
@@ -110,8 +173,74 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="NSU-DS-2:NSU-DS-2-common [genJaxb]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NSU-DS-2-common" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="genJaxb" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="NSU-DS-2:NSU-DS-2-common [generateCrackHashRequest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NSU-DS-2-common" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateCrackHashRequest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="NSU-DS-2:NSU-DS-2-common [generateCrackHashResponse]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NSU-DS-2-common" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateCrackHashResponse" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.NSU-DS-2:NSU-DS-2-common [genJaxb]" />
+        <item itemvalue="Gradle.NSU-DS-2:NSU-DS-2-common [generateCrackHashRequest]" />
+        <item itemvalue="Gradle.NSU-DS-2:NSU-DS-2-common [generateCrackHashResponse]" />
         <item itemvalue="Gradle.NSU-DS-2 [genJaxb]" />
       </list>
     </recent_temporary>
@@ -128,6 +257,8 @@
       <workItem from="1681654059748" duration="971000" />
       <workItem from="1682148312118" duration="12945000" />
       <workItem from="1682235646187" duration="12560000" />
+      <workItem from="1682337988422" duration="1577000" />
+      <workItem from="1682339868043" duration="3771000" />
     </task>
     <task id="LOCAL-00001" summary="Add spring boot">
       <created>1681664764058</created>

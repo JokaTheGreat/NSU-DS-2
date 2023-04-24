@@ -9,6 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/NSU-DS-2-common" />
+            <option value="$PROJECT_DIR$/NSU-DS-2-manager" />
+            <option value="$PROJECT_DIR$/NSU-DS-2-worker" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,0 +1,49 @@
+jar.enabled = true
+
+configurations {
+    jaxb
+}
+
+dependencies {
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+    jaxb 'javax.xml.bind:jaxb-api:2.3.1'
+    jaxb 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+    jaxb 'com.sun.xml.bind:jaxb-xjc:2.3.1'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+tasks.register('genJaxb') {
+    ext.sourcesDir = "src/main/java"
+    ext.schema1 = "src/main/resources/CrackHashManagerSchema.xsd"
+    ext.schema2 = "src/main/resources/CrackHashWorkerSchema.xsd"
+
+    outputs.dir sourcesDir
+
+    doLast() {
+        project.ant {
+            taskdef name: "xjc", classname: "com.sun.tools.xjc.XJCTask",
+                    classpath: configurations.jaxb.asPath
+            mkdir(dir: sourcesDir)
+
+            xjc(destdir: sourcesDir, schema: schema1) {
+                arg(value: "-wsdl")
+                produces(dir: sourcesDir, includes: "**/*.java")
+            }
+
+            xjc(destdir: sourcesDir, schema: schema2) {
+                arg(value: "-wsdl")
+                produces(dir: sourcesDir, includes: "**/*.java")
+            }
+        }
+    }
+}
+
+compileJava.dependsOn genJaxb

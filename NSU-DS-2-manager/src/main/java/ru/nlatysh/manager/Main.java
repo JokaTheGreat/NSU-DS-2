@@ -1,4 +1,4 @@
-package org.example;
+package ru.nlatysh.manager;
 import org.springframework.boot.SpringApplication;
 
 public class Main {

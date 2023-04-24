@@ -1,2 +1,5 @@
 rootProject.name = 'NSU-DS-2'
 
+include 'NSU-DS-2-worker'
+include 'NSU-DS-2-manager'
+include 'NSU-DS-2-common'

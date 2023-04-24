@@ -1,8 +1,6 @@
-package org.example;
+package ru.nlatysh.worker;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.example.models.CrackHashManagerRequest;
-import org.example.models.CrackHashWorkerResponse;
 import org.paukov.combinatorics.Generator;
 import org.paukov.combinatorics.ICombinatoricsVector;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.BodyInserter;
+import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.web.reactive.function.client.WebClient;
+import ru.nlatysh.common.models.CrackHashManagerRequest;
+import ru.nlatysh.common.models.CrackHashWorkerResponse;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -61,12 +64,12 @@ public class Worker {
         answersObject.getWords().addAll(answers);
         crackHashResponse.setAnswers(answersObject);
 
-        RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity response = restTemplate.exchange(
-                new URI("http://localhost:8080/internal/api/manager/hash/crack/request"),
-                HttpMethod.PATCH,
-                new HttpEntity<>(crackHashResponse),
-                ResponseEntity.class
-        );
+        WebClient.builder().build()
+                .patch()
+                .uri("http://localhost:8080/internal/api/manager/hash/crack/request")
+                .body(BodyInserters.fromValue(crackHashResponse))
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
     }
 }
