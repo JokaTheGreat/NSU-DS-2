@@ -3,32 +3,22 @@ package ru.nlatysh.worker;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.paukov.combinatorics.Generator;
 import org.paukov.combinatorics.ICombinatoricsVector;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.reactive.function.BodyInserter;
-import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import ru.nlatysh.common.models.CrackHashManagerRequest;
 import ru.nlatysh.common.models.CrackHashWorkerResponse;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.paukov.combinatorics.CombinatoricsFactory.*;
+import static org.paukov.combinatorics.CombinatoricsFactory.createPermutationWithRepetitionGenerator;
+import static org.paukov.combinatorics.CombinatoricsFactory.createVector;
 
-@SpringBootApplication
-@RestController
-public class Worker {
-    @PostMapping("/internal/api/worker/hash/crack/task")
-    public void doCrackHash(@RequestBody CrackHashManagerRequest crackHashRequest) throws URISyntaxException {
+@Service
+public class WorkerService {
+    public ResponseEntity<Void> doCrackHash(CrackHashManagerRequest crackHashRequest) {
         List<String> answers = crackHash(
                 crackHashRequest.getHash(),
                 crackHashRequest.getMaxLength(),
@@ -36,6 +26,8 @@ public class Worker {
         );
 
         patchCrackHashManager(crackHashRequest.getRequestId(), crackHashRequest.getPartNumber(), answers);
+
+        return ResponseEntity.ok().build();
     }
 
     private List<String> crackHash(String hash, int maxLength, String[] alphabet) {
@@ -56,20 +48,20 @@ public class Worker {
         return answer;
     }
 
-    private void patchCrackHashManager(String requestId, int partNumber, List<String> answers) throws URISyntaxException {
+    private void patchCrackHashManager(String requestId, int partNumber, List<String> answers) {
         CrackHashWorkerResponse crackHashResponse = new CrackHashWorkerResponse();
-        crackHashResponse.setRequestId(requestId);
-        crackHashResponse.setPartNumber(partNumber);
         CrackHashWorkerResponse.Answers answersObject = new CrackHashWorkerResponse.Answers();
         answersObject.getWords().addAll(answers);
+
+        crackHashResponse.setRequestId(requestId);
+        crackHashResponse.setPartNumber(partNumber);
         crackHashResponse.setAnswers(answersObject);
 
-        WebClient.builder().build()
-                .patch()
-                .uri("http://localhost:8080/internal/api/manager/hash/crack/request")
-                .body(BodyInserters.fromValue(crackHashResponse))
+        WebClient.create("http://localhost:8080/internal/api/manager/hash/crack/request")
+                .method(HttpMethod.PATCH)
+                .bodyValue(crackHashResponse)
                 .retrieve()
-                .bodyToMono(String.class)
-                .block();
+                .bodyToMono(ResponseEntity.class)
+                .toFuture();
     }
 }
