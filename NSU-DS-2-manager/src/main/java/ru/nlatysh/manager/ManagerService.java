@@ -68,7 +68,7 @@ public class ManagerService {
         crackHashRequest.setPartNumber(workersCount);
         crackHashRequest.setAlphabet(alphabet);
 
-        WebClient.create("http://localhost:8081/internal/api/worker/hash/crack/task")
+        WebClient.create("http://worker:8080/internal/api/worker/hash/crack/task")
                 .method(HttpMethod.POST)
                 .bodyValue(crackHashRequest)
                 .retrieve()

@@ -57,7 +57,7 @@ public class WorkerService {
         crackHashResponse.setPartNumber(partNumber);
         crackHashResponse.setAnswers(answersObject);
 
-        WebClient.create("http://localhost:8080/internal/api/manager/hash/crack/request")
+        WebClient.create("http://manager:8080/internal/api/manager/hash/crack/request")
                 .method(HttpMethod.PATCH)
                 .bodyValue(crackHashResponse)
                 .retrieve()

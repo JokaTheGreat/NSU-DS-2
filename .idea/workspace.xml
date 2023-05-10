@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add worker and manager messaging">
-      <change afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerService.java" afterDir="false" />
+    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Restructed project">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager.dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worker.dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/Worker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
                 <item name="NSU-DS-2-common" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -54,31 +64,6 @@
                 <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
                 <item name="NSU-DS-2-common" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
-                <item name="NSU-DS-2-common" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
-                <item name="NSU-DS-2-manager" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
-                <item name="NSU-DS-2-manager" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NSU-DS-2" type="f1a62948:ProjectNode" />
-                <item name="NSU-DS-2-manager" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -96,6 +81,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="cd838f2c-eeeb-48b2-9598-9190f4ad21d4" />
+        <option name="url" value="https://github.com/JokaTheGreat/NSU-DS-2.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -143,7 +141,7 @@
       <recent name="C:\Users\nikita\IdeaProjects\NSU-DS-2\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.WorkerApplication">
     <configuration name="WorkerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.nlatysh.worker.WorkerApplication" />
       <module name="NSU-DS-2.NSU-DS-2-worker.main" />

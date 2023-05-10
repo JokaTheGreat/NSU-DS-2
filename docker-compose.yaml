@@ -1,0 +1,9 @@
+services:
+  manager:
+    build:
+      dockerfile: manager.dockerfile
+    ports:
+      - 8080:8080
+  worker:
+    build:
+      dockerfile: worker.dockerfile
