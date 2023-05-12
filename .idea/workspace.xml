@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Add docker">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="236ffabd-c4a0-4a39-8400-2860bb214185" name="Changes" comment="Fix xml using and generating">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSU-DS-2-common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-common/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/CrackHashManagerRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/CrackHashWorkerResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/ObjectFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-common/src/main/java/ru/nlatysh/common/models/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSU-DS-2-manager/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-manager/src/main/java/ru/nlatysh/manager/ManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSU-DS-2-worker/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-worker/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NSU-DS-2-worker/src/main/java/ru/nlatysh/worker/WorkerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +279,7 @@
       <workItem from="1682865959386" duration="266000" />
       <workItem from="1682867553549" duration="3527000" />
       <workItem from="1683830392301" duration="2502000" />
-      <workItem from="1683902413273" duration="2667000" />
+      <workItem from="1683902413273" duration="4812000" />
     </task>
     <task id="LOCAL-00001" summary="Add spring boot">
       <created>1681664764058</created>
@@ -314,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682237743856</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix xml using and generating">
+      <created>1683905475263</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683905475263</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +338,7 @@
     <MESSAGE value="Add hash crack endpoint" />
     <MESSAGE value="Add get hash crack status endpoint" />
     <MESSAGE value="Add worker with crack hash logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add worker with crack hash logic" />
+    <MESSAGE value="Fix xml using and generating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix xml using and generating" />
   </component>
 </project>

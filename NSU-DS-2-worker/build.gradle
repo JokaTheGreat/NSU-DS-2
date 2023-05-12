@@ -1,7 +1,6 @@
 
 dependencies {
     implementation project(':NSU-DS-2-common')
-    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'com.googlecode.combinatoricslib:combinatoricslib:2.3'
     implementation 'commons-codec:commons-codec:1.15'
