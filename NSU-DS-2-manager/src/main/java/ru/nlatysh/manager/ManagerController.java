@@ -9,16 +9,12 @@ import ru.nlatysh.common.models.CrackHashWorkerResponse;
 import ru.nlatysh.manager.models.CrackHash;
 import ru.nlatysh.manager.models.CrackHashStatus;
 
+import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
+
 @RestController
 public class ManagerController {
-    private final ManagerService managerService;
-
     @Autowired
-    public ManagerController(ManagerService managerService) {
-        this.managerService = managerService;
-    }
-
-    
+    ManagerService managerService;
     @PostMapping(value = "/api/hash/crack", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> crackHash(@RequestBody CrackHash crackHash) {
         return managerService.crackHash(crackHash);
@@ -29,7 +25,7 @@ public class ManagerController {
         return managerService.GetCrackHashStatus(requestId);
     }
 
-    @PatchMapping("/internal/api/manager/hash/crack/request")
+    @PatchMapping(value = "/internal/api/manager/hash/crack/request", consumes = APPLICATION_XML_VALUE)
     public ResponseEntity<Void> patchCrackHashData(@RequestBody CrackHashWorkerResponse crackHashResponse) {
         return managerService.patchCrackHashData(crackHashResponse);
     }

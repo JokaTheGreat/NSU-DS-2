@@ -2,6 +2,7 @@ package ru.nlatysh.manager;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -70,6 +71,7 @@ public class ManagerService {
 
         WebClient.create("http://worker:8080/internal/api/worker/hash/crack/task")
                 .method(HttpMethod.POST)
+                .contentType(MediaType.APPLICATION_XML)
                 .bodyValue(crackHashRequest)
                 .retrieve()
                 .bodyToMono(ResponseEntity.class)

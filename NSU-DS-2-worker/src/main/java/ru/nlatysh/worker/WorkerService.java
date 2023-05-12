@@ -4,6 +4,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.paukov.combinatorics.Generator;
 import org.paukov.combinatorics.ICombinatoricsVector;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -59,6 +60,7 @@ public class WorkerService {
 
         WebClient.create("http://manager:8080/internal/api/manager/hash/crack/request")
                 .method(HttpMethod.PATCH)
+                .contentType(MediaType.APPLICATION_XML)
                 .bodyValue(crackHashResponse)
                 .retrieve()
                 .bodyToMono(ResponseEntity.class)

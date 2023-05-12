@@ -5,11 +5,11 @@ configurations {
 }
 
 dependencies {
-    implementation 'javax.xml.bind:jaxb-api:2.3.1'
-    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
-    jaxb 'javax.xml.bind:jaxb-api:2.3.1'
-    jaxb 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
-    jaxb 'com.sun.xml.bind:jaxb-xjc:2.3.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    jaxb 'jakarta.xml.bind:jakarta.xml.bind-api'
+    jaxb 'org.glassfish.jaxb:jaxb-runtime'
+    jaxb 'org.glassfish.jaxb:jaxb-xjc'
 }
 
 sourceSets {
@@ -22,8 +22,7 @@ sourceSets {
 
 tasks.register('genJaxb') {
     ext.sourcesDir = "src/main/java"
-    ext.schema1 = "src/main/resources/CrackHashManagerSchema.xsd"
-    ext.schema2 = "src/main/resources/CrackHashWorkerSchema.xsd"
+    ext.schemas = "src/main/resources/"
 
     outputs.dir sourcesDir
 
@@ -33,13 +32,9 @@ tasks.register('genJaxb') {
                     classpath: configurations.jaxb.asPath
             mkdir(dir: sourcesDir)
 
-            xjc(destdir: sourcesDir, schema: schema1) {
+            xjc(destdir: sourcesDir) {
                 arg(value: "-wsdl")
-                produces(dir: sourcesDir, includes: "**/*.java")
-            }
-
-            xjc(destdir: sourcesDir, schema: schema2) {
-                arg(value: "-wsdl")
+                schema(dir: schemas, includes: "*.xsd")
                 produces(dir: sourcesDir, includes: "**/*.java")
             }
         }
